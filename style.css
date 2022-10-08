@@ -65,3 +65,46 @@
     line-height: 100vh;
     cursor: default;
 }
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0px 100px;
+}
+
+.projectsTitle{
+    font-size:  10vw;
+    color: #333;
+}
+
+.project{
+    display: flex;
+    align-content: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.phone{
+    width :300px;
+    height: 600px;
+    position: relative;
+}
+
+.phoneScreen{
+    width: 264px;
+    height: 567px;
+    position: absolute;
+    top: 17px;
+    left: 18px;
+    border-radius: 25px;
+    overflow: scroll;
+}
+
+
+
+.phoneApp{
+    width: 100%;
+}
+
