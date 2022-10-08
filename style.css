@@ -88,7 +88,7 @@
 
 /* For left right left alignment of projects */
 /* find the nth child 2n find the even children */
-.project:nth-child(2n){
+.project:nth-child(2n) {
     flex-direction: row-reverse;
 }
 
@@ -126,19 +126,21 @@
     align-items: center;
 }
 
-.projectTitle{
+.projectTitle {
     font-size: 7vw;
-    color:#555
+    color: #555
 }
 
-.projectDesc{
+.projectDesc {
     font-size: 20px;
     color: #555;
-    text-align: justify;  /* For justofication of paragraph */
-    line-height: 40px; /* For space between lines */
+    text-align: justify;
+    /* For justofication of paragraph */
+    line-height: 40px;
+    /* For space between lines */
 }
 
-.projectButton{
+.projectButton {
     padding: 10px 20px;
     background-color: transparent;
     border: 2px solid #555;
@@ -148,8 +150,8 @@
     overflow: hidden;
 }
 
-.projectButton::after{
-    content:"View Demo";
+.projectButton::after {
+    content: "View Demo";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -160,21 +162,21 @@
     align-items: center;
     justify-content: center;
     background-color: #555;
-    color:#222;
+    color: #222;
 }
 
-.projectButton:hover.projectButton::after{
+.projectButton:hover.projectButton::after {
     transform: translateX(100%);
 }
 
-.laptop{
+.laptop {
     width: 600px;
     height: 379px;
     flex: 1;
     position: relative;
 }
 
-.laptopScreen{
+.laptopScreen {
     width: 451px;
     height: 283px;
     position: absolute;
@@ -184,10 +186,63 @@
     background-color: aqua;
 }
 
-.laptopApp{
+.laptopApp {
     width: 100%;
 }
 
 .laptopScreen::-webkit-scrollbar {
     display: none;
+}
+
+.githubContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.githubTitle {
+    font-size: 100px;
+    color: #333;
+}
+
+.githubCharts {
+    width: 820px;
+    text-align: center;
+}
+
+.dates {
+    padding: 10px;
+    color: #555;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.box {
+    width: 15px;
+    height: 15px;
+    background-color: #171c25;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 1.8s all ease;
+}
+
+.active:nth-child(4n) {
+    background-color: #195b2c;
+}
+
+.githubCharts:hover .active:nth-child(2n+1) {
+    background-color: #195b2c;
+}
+
+.githubCharts:hover .active:nth-child(2n) {
+    background-color: #063f24;
 }
