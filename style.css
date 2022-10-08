@@ -102,7 +102,10 @@
     overflow: scroll;
 }
 
-
+/* To delete the scroll indicator */
+.phoneScreen::-webkit-scrollbar{
+    display: none;
+}
 
 .phoneApp{
     width: 100%;
