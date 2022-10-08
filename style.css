@@ -1,84 +1,84 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
-.container{
+.container {
     background-color: black;
 }
 
-.salute{
+.salute {
     height: 100vh;
     display: flex;
     align-items: center;
     overflow: hidden;
 }
 
-.saluteTextContainer{
+.saluteTextContainer {
     flex: 3;
 }
 
-.saluteText{
-    color:#333;
+.saluteText {
+    color: #333;
     font-size: 60vw;
     cursor: default;
 }
 
-.saluteImgContainer{
-    flex:1;
+.saluteImgContainer {
+    flex: 1;
 }
 
-.saluteImg{
+.saluteImg {
     width: 100%;
 }
 
-.nameContainer{
+.nameContainer {
     height: 100vh;
     background-color: rebeccapurple;
 }
 
-.name{
-    font-size:17vw;
+.name {
+    font-size: 17vw;
     color: #333;
     cursor: default;
     text-align: center;
     line-height: 100vh;
-    background-color: blanchedalmond ;
+    background-color: blanchedalmond;
 }
 
-.jobTitleContainer{
+.jobTitleContainer {
     height: 100vh;
 }
 
-.dark{
+.dark {
     background: url("./img/bg1.png");
 }
 
-.purple{
-    background:rebeccapurple url("./img/bg2.png");
+.purple {
+    background: rebeccapurple url("./img/bg2.png");
 }
 
-.jobTitle{
+.jobTitle {
     font-size: 8vw;
     color: #333;
     line-height: 100vh;
     cursor: default;
 }
 
-.projects{
+.projects {
     display: flex;
     flex-direction: column;
     gap: 30vh;
     padding: 0px 100px;
 }
 
-.projectsTitle{
-    font-size:  10vw;
+.projectsTitle {
+    font-size: 10vw;
     color: #333;
 }
 
-.project{
+.project {
     display: flex;
     align-content: center;
     gap: 100px;
@@ -86,13 +86,20 @@
     overflow: hidden;
 }
 
-.phone{
-    width :300px;
+/* For left right left alignment of projects */
+/* find the nth child 2n find the even children */
+.project:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.phone {
+    flex: 1;
+    width: 300px;
     height: 600px;
     position: relative;
 }
 
-.phoneScreen{
+.phoneScreen {
     width: 264px;
     height: 567px;
     position: absolute;
@@ -103,11 +110,84 @@
 }
 
 /* To delete the scroll indicator */
-.phoneScreen::-webkit-scrollbar{
+.phoneScreen::-webkit-scrollbar {
     display: none;
 }
 
-.phoneApp{
+.phoneApp {
     width: 100%;
 }
 
+.projectDetail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.projectTitle{
+    font-size: 7vw;
+    color:#555
+}
+
+.projectDesc{
+    font-size: 20px;
+    color: #555;
+    text-align: justify;  /* For justofication of paragraph */
+    line-height: 40px; /* For space between lines */
+}
+
+.projectButton{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectButton::after{
+    content:"View Demo";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 1s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    color:#222;
+}
+
+.projectButton:hover.projectButton::after{
+    transform: translateX(100%);
+}
+
+.laptop{
+    width: 600px;
+    height: 379px;
+    flex: 1;
+    position: relative;
+}
+
+.laptopScreen{
+    width: 451px;
+    height: 283px;
+    position: absolute;
+    top: 18px;
+    left: 68px;
+    overflow: scroll;
+    background-color: aqua;
+}
+
+.laptopApp{
+    width: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar {
+    display: none;
+}
