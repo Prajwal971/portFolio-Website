@@ -1,4 +1,12 @@
+// For the entire container
 const boxContainer = document.querySelector(".boxContainer")
+// For the Text HI
+const saluteTextContainer = document.querySelector(".saluteTextContainer")
+// For the Text Image
+const saluteImgContainer = document.querySelector(".saluteImgContainer")
+// For name intro
+const authorName = document.querySelector(".name")
+
 
 
 for (let i = 0; i < 365; i++) {
@@ -17,9 +25,19 @@ for (let i = 0; i < 365; i++) {
         156, 157, 197, 198, 238, 239, 279, 280, 320, 321, 36, 37, 38, 39, 77, 78,
         79, 80, 118, 119, 159, 160, 161, 162, 200, 201, 202, 203, 241, 242, 282,
         283, 284, 285, 323, 324, 325, 326,
-      ];
+    ];
 
     const ele = document.createElement("div")
     ele.classList = list.includes(i) ? "box active" : "box"
     boxContainer.appendChild(ele)
 }
+
+// position will be increasing in the same number
+// and it will look like its not moving
+window.addEventListener("scroll", () => {
+    let offsetY = window.scrollY // when scrolling vertically
+    saluteTextContainer.style.transform = `translateY(${offsetY * 0.9}px)` //Translate Y for Y axis
+    saluteImgContainer.style.transform = `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`  //Translate for XY axis
+    //Name animation only X axis and 0.1 will be slow and 1 will be fast
+    authorName.style.transform = `translateX(${offsetY * 0.1}px)` 
+})

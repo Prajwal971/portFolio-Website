@@ -5,7 +5,8 @@
 }
 
 .container {
-    background-color: black;
+    background-color: #111;
+    overflow: hidden;
 }
 
 .salute {
@@ -16,7 +17,7 @@
 }
 
 .saluteTextContainer {
-    flex: 3;
+    flex: 1;
 }
 
 .saluteText {
@@ -44,7 +45,6 @@
     cursor: default;
     text-align: center;
     line-height: 100vh;
-    background-color: blanchedalmond;
 }
 
 .jobTitleContainer {
