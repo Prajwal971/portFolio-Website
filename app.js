@@ -8,8 +8,12 @@ const saluteImgContainer = document.querySelector(".saluteImgContainer")
 const authorName = document.querySelector(".name")
 // For Title
 // querySelectorAll for both dark and purple
-const jobTitleContainer = document.querySelectorAll(".jobTitleContainer")
+const jobTitleContainers = document.querySelectorAll(".jobTitleContainer")
 // jobTitleContainer[0] dark and [1] for purple
+const jobTitles = document.querySelectorAll(".jobTitle")
+// Title of the projects
+const projectsTitle = document.querySelector(".projectsTitle")
+
 
 
 
@@ -45,7 +49,11 @@ window.addEventListener("scroll", () => {
     //Name animation only X axis and 0.1 will be slow and 1 will be fast
     authorName.style.transform = `translateX(${offsetY * 0.1}px)`
     // Move the background image #parallax effect
-    jobTitleContainer[0].style.backgroundPositionY = `${offsetY * 0.5}px`
+    jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.5}px`
     // Move the  designation    #parallax effect
-    jobTitleContainer[1].style.backgroundPositionY = `${-offsetY * 0.5}px`
+    jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`
+    jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))` // 200 becs the container needs the offset value to be 0 so height of 2 div is 200 and the 3rd div we need to be 0
+    jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`// 300 becs the container needs the offset value to be 0 so height of 2 div is 200 and the 3rd div we need to be 0
+    //projectsTitle
+    projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`
 })
