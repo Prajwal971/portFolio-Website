@@ -6,6 +6,11 @@ const saluteTextContainer = document.querySelector(".saluteTextContainer")
 const saluteImgContainer = document.querySelector(".saluteImgContainer")
 // For name intro
 const authorName = document.querySelector(".name")
+// For Title
+// querySelectorAll for both dark and purple
+const jobTitleContainer = document.querySelectorAll(".jobTitleContainer")
+
+// jobTitleContainer[0] dark and [1] for purple
 
 
 
@@ -40,4 +45,6 @@ window.addEventListener("scroll", () => {
     saluteImgContainer.style.transform = `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`  //Translate for XY axis
     //Name animation only X axis and 0.1 will be slow and 1 will be fast
     authorName.style.transform = `translateX(${offsetY * 0.1}px)` 
+    // Move the background image and the designation
+    jobTitleContainer[0].style.backgroundPositionY = `${offsetY * 0.5}px`
 })
