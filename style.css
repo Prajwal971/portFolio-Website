@@ -17,7 +17,7 @@
 }
 
 .saluteTextContainer {
-    flex: 1;
+    flex: 3;
 }
 
 .saluteText {
@@ -76,6 +76,7 @@
 .projectsTitle {
     font-size: 10vw;
     color: #333;
+
 }
 
 .project {
@@ -245,4 +246,47 @@
 
 .githubCharts:hover .active:nth-child(2n) {
     background-color: #063f24;
+}
+
+.githubSm {
+    display: flex;
+}
+
+@media screen and (max-width:1024px) {
+
+    .projects{
+        padding: 0 30px;
+        text-align: center;
+    }
+    .project {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .project:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    .phone,.laptop {
+        transform: none !important;
+    }
+
+    .githubCharts {
+        display: none;
+    }
+
+    .githubTitle{
+        text-align: center;
+        font-size: 10vw;
+    }
+
+    .githubSm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        color: #555;
+        font-size: 30px;
+        text-align: center;
+    }
 }

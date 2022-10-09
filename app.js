@@ -13,6 +13,10 @@ const jobTitleContainers = document.querySelectorAll(".jobTitleContainer")
 const jobTitles = document.querySelectorAll(".jobTitle")
 // Title of the projects
 const projectsTitle = document.querySelector(".projectsTitle")
+// Phones
+const phones = document.querySelectorAll(".phone")
+// Laptop
+const laptop = document.querySelector(".laptop")
 
 
 
@@ -56,4 +60,9 @@ window.addEventListener("scroll", () => {
     jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`// 300 becs the container needs the offset value to be 0 so height of 2 div is 200 and the 3rd div we need to be 0
     //projectsTitle
     projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`
+    phones[0].style.transform = `translateX(calc(500vh - ${offsetY}px))`
+    // Laptop image transform
+    laptop.style.transform = `translateX(calc(600vh - ${offsetY}px))`
+    // for last Phone image
+    phones[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`
 })
